@@ -1,0 +1,593 @@
+<!DOCTYPE html><html lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" data-scrapbook-source="https://sageuniversesolana.com/" data-scrapbook-create="20240705182509798" data-scrapbook-title="$SAGE"><head>
+
+  <!-- Primary Meta Tags -->
+  <title>$SAGE </title>
+  <meta name="title" content="SageUniverse ">
+  <meta name="description" content="Sage universe combines the magic of memes with the wisdom of the cosmos. Together we'll explore new dimensions of fun, wisdom and financial freedom. Here YOU find your path to a better life, a greater you, where your wallet is not the only thing that expands...">
+  <script type="module" src="endless.js" defer></script>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sageuniverse.meme/">
+  <meta property="og:title" content="SageUniverse ">
+  <meta property="og:description" content="Sage universe combines the magic of memes with the wisdom of the cosmos. Together we'll explore new dimensions of fun, wisdom and financial freedom. Here YOU find your path to a better life, a greater you, where your wallet is not the only thing that expands...">
+  <meta property="og:image" content="./cover.gif">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://x.com/SAGEUNIVERS3">
+  <meta property="twitter:title" content="SageUniverse ">
+  <meta property="twitter:description" content="Sage universe combines the magic of memes with the wisdom of the cosmos. Together we'll explore new dimensions of fun, wisdom and financial freedom. Here YOU find your path to a better life, a greater you, where your wallet is not the only thing that expands...">
+  <meta property="twitter:image" content="./cover.gif">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="SageUniverse">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+
+  <link href="style.css" rel="stylesheet">
+  <link href="all.min.css" rel="stylesheet">
+  <link href="css.css" rel="stylesheet">
+  <link href="css2-1.css" rel="stylesheet">
+  <style>
+    .card {
+      background: transparent;
+    }
+
+    .accordion-item {
+      background-color: #fff;
+      border: none !important;
+    }
+
+    .accordion .accordion-item {
+      border-bottom: 1px solid #000000;
+    }
+
+    .accordion .accordion-item button[aria-expanded=true] {
+      border-bottom: 1px solid #000000;
+    }
+
+    .accordion button {
+      position: relative;
+      display: block;
+      text-align: left;
+      width: 100%;
+      padding: 1em 0;
+      color: #000;
+      font-size: 1.15rem;
+      font-weight: 400;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    .accordion button:hover,
+    .accordion button:focus {
+      cursor: pointer;
+      color: #000;
+    }
+
+    .accordion button:hover::after,
+    .accordion button:focus::after {
+      cursor: pointer;
+      color: #000;
+    }
+
+    .accordion button .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+
+    .accordion button .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 22px;
+      height: 22px;
+    }
+
+    .accordion button .icon::before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 9px;
+      left: 5px;
+      width: 10px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .accordion button .icon::after {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 9px;
+      width: 2px;
+      height: 10px;
+      background: currentColor;
+    }
+
+    .accordion button[aria-expanded=true] {
+      color: #000;
+    }
+
+    .accordion button[aria-expanded=true] .icon::after {
+      width: 0;
+    }
+
+    .accordion button[aria-expanded=true]+.accordion-content {
+      opacity: 1;
+      max-height: 15em;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+
+    .accordion .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 200ms linear, max-height 200ms linear;
+      will-change: opacity, max-height;
+    }
+
+    .accordion .accordion-content p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 2em 0;
+    }
+
+    .dark-section-wrapper:nth-of-type(4) {
+      background-image: url("");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+
+    .light-section-wrapper {
+      background-image: url("");
+      background-size: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* xsView: visible on extra small screens (mobile) */
+    .xsView {
+      display: none;
+    }
+
+    @media (max-width: 767.98px) {
+      .xsView {
+        display: block;
+      }
+    }
+
+    /* mdView: visible on medium screens (tablet) and up */
+    .mdView {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .mdView {
+        display: block;
+      }
+    }
+
+    /* mdNone: hidden on medium screens (tablet) and up */
+    .mdNone {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .mdNone {
+        display: none;
+      }
+    }
+
+    /* xsNone: hidden on extra small screens (mobile) */
+    .xsNone {
+      display: block;
+    }
+
+    @media (max-width: 767.98px) {
+      .xsNone {
+        display: none;
+      }
+    }
+
+
+    @media (max-width: 768px) {
+
+      /* You can adjust the max-width value as needed */
+      .caAddrr {
+        font-size: calc(1rem + 0.1vw);
+      }
+
+      .start-thumbs-wrapper {
+        margin-top: 5rem;
+      }
+
+      .start-thumbs-caption {
+        padding: 0.9rem;
+      }
+
+      .page-nav-caption.height-title {
+        height: auto !important;
+      }
+
+      .text-align-center .next-hero-title,
+      .text-align-center .next-hero-subtitle {
+        display: table;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: 8rem;
+      }
+
+      #logo img {
+        height: 80px !important;
+      }
+
+      .light-content .hero-subtitle {
+        color: #fff;
+        padding: 1rem;
+      }
+
+      #hero-footer {
+        display: none;
+      }
+
+      .mobileLogo {
+        display: block !important;
+      }
+
+      #hero-styles {
+        margin: 2rem auto;
+      }
+
+    }
+
+    .btn-lg {
+      border: 1px solid #9967ce;
+      color: white;
+    }
+
+    @media (max-width: 400px) {
+      .start-thumbs-wrapper {
+        margin-top: 8rem;
+      }
+
+      #logo img {
+        height: 60px !important;
+      }
+
+      .caAddrr {
+        font-size: calc(1rem + 0.1vw);
+      }
+    }
+
+    #hero-styles {
+      background: url("image2o.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  </style>
+  <style id="smooth-scrollbar-style">
+    [data-scrollbar] {
+      display: block;
+      position: relative;
+    }
+
+    .scroll-content {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    .scrollbar-track {
+      position: absolute;
+      opacity: 0;
+      z-index: 1;
+      background: rgba(222, 222, 222, .75);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-transition: opacity 0.5s 0.5s ease-out;
+      transition: opacity 0.5s 0.5s ease-out;
+    }
+
+    .scrollbar-track.show,
+    .scrollbar-track:hover {
+      opacity: 1;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+
+    .scrollbar-track-x {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+    }
+
+    .scrollbar-track-y {
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 100%;
+    }
+
+    .scrollbar-thumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background: rgba(0, 0, 0, .5);
+      border-radius: 4px;
+    }
+  </style>
+
+
+
+<link href="css2.css" rel="stylesheet"></head><body class="smooth-scroll rounded-borders header-visible" data-primary-color="#8c6144" style="">
+
+
+  <main style="background-color: rgb(12, 12, 12);">
+    <!-- Preloader -->
+    <div class="preloader-wrap" data-centerline="Loading" style="opacity: 0; translate: none; rotate: none; scale: none; transform: translate(0%, -101%); visibility: hidden;">
+      <div class="outer">
+        <div class="inner">
+          <div class="trackbar" style="clip-path: inset(0%);">
+            <div class="preloader-intro">
+              <span style="translate: none; rotate: none; scale: none; transform: translate(-101%, 0%); opacity: 0;">Loading</span>
+            </div>
+            <div class="loadbar" style="width: 100%;"></div>
+            <div class="percentage-wrapper" style="translate: none; rotate: none; scale: none; transform: translate(855px);">
+              <div class="percentage" id="precent" style="translate: none; rotate: none; scale: none; transform: translate(0px, -100px); opacity: 0;">100
+              </div>
+            </div>
+          </div>
+
+          <div class="percentage-intro" style="opacity: 0;">Please wait, content is loading</div>
+        </div>
+      </div>
+    </div>
+    <!--/Preloader -->
+
+    <div class="cd-index cd-main-content">
+
+      <!-- Page Content -->
+      <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
+
+        <!-- Header -->
+        <header class="fullscreen-menu invert-header" data-menucolor="#0c0c0c" style="background-color: transparent;">
+          <div id="header-container" style="opacity: 1;">
+
+
+            <!-- Logo -->
+            <div id="logo" class="hide-ball">
+              <a class="ajax-link" data-type="page-transition" href="">
+                <img class="black-logo" src="animation0001.gif" style="height:130px" alt="ClaPat Logo">
+                <img class="white-logo" src="animation0001.gif" style="height:130px" alt="ClaPat Logo">
+              </a>
+            </div>
+            <!--/Logo -->
+
+
+            <!-- Navigation -->
+            <nav style="background-color: rgb(12, 12, 12);">
+              <div class="nav-height">
+                <div class="outer">
+                  <div class="inner">
+                    <ul data-breakpoint="10025" class="flexnav with-js opacity sm-screen">
+                      <li class="link menu-timeline"><a class="" href="">
+                          <div class="before-span" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 120px);">
+                            <span data-hover="UNIVERSE">Home</span></div>
+                        </a>
+
+                      </li>
+                      <li class="link menu-timeline"><a class="" href="https://jup.ag/swap/SOL-CMe1QWsoDWFUi95GMkk7mCTnnjxBxtnJ3jbrEhQTVWL5" target="_new">
+                          <div class="before-span" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 120px);">
+                            <span data-hover="Buy">Buy</span></div>
+                        </a>
+                      </li>
+                      <li class="link menu-timeline"><a class="" href="https://x.com/SAGEUNIVERS3" target="_new">
+                          <div class="before-span" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate(0px, 120px);">
+                            <span data-hover="Twitter">Follow</span></div>
+                        </a>
+
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <!--/Navigation -->
+
+
+            <!-- Menu Burger -->
+            <div class="button-wrap right menu burger-lines">
+              <div class="icon-wrap parallax-wrap" style="translate: none; rotate: none; scale: none; transform: translate(0px);">
+                <div class="button-icon parallax-element" style="translate: none; rotate: none; scale: none; transform: translate(0px);">
+                  <div id="burger-wrapper">
+                    <div id="menu-burger">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <span class="touch-button"><i class="navicon">▼</i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="button-text sticky right"><span data-hover="Menu">Menu</span></div>
+            </div>
+            <!--/Menu Burger -->
+
+          </div>
+        </header>
+        <!--/Header -->
+
+
+
+        <!-- Content Scroll -->
+        <div id="content-scroll" data-scrollbar="true" tabindex="-1" style="overflow: hidden; outline: none;">
+          <div class="scroll-content" style="transform: translate3d(0px, 0px, 0px);">
+
+
+            <!-- Main -->
+            <div id="main" style="opacity: 1;">
+
+              <!-- Hero Section -->
+              <div id="hero">
+                <div id="hero-styles">
+                  <div id="hero-caption" style="z-index: 9; height: 947px; translate: none; rotate: none; scale: none; opacity: 0.9137; transform: translate(0%, 0.8633%) translate3d(0px, 0px, 0px);" class="content-full-width parallax-scroll-caption text-align-center height-title">
+                    <div class="inner">
+                      <h1 class="hero-title caption-timeline primary-font-title">
+                        <div><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">S</span><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">A</span><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">G</span><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">E</span>
+                        </div>
+                        <div><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);"></span>
+                        </div>
+                        <div><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">U</span><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">N</span><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">I</span><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">V</span><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">E</span><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">R</span><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">S</span><span style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px);">E</span>
+                        </div>
+                      </h1>
+                      <h5 class="light-content caAddrr">$SAGE AIRDROP IS LIVE</h5>
+
+
+                      <div style="">
+
+
+                        <div class="btn-group" role="group" aria-label="Basic example">
+
+                          <a id="claimButton" style="cursor: pointer;" class="btn btn-default btn-lg">Claim Airdrop</a>
+
+                        </div>
+                        <div class="mobileLogo" style="">
+                          <img src="starsMobile.gif" style="max-width: 170px;margin: 2rem auto;">
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- <div id="hero-footer">
+                            	<div class="hero-footer-left">
+                                	<div class="button-wrap right scroll-down">
+                                        
+                                        <div class="button-text sticky right" style="    position: absolute;
+                                        bottom: 0;
+                                        opacity: 0.4;"><img src="images/image2.png" style="max-width: 600px;    opacity: 0.4;"/></div> 
+                                    </div>
+                                </div>
+                                <div class="hero-footer-right">
+                    				
+                                </div>
+                            </div>                                   -->
+                </div>
+              </div>
+              <!--/Hero Section -->
+
+              <!-- Main Content -->
+
+              <!--/Main Content -->
+
+            </div>
+            <!--/Main -->
+
+            <!-- Footer -->
+            <footer class="hidden">
+              <div id="footer-container" style="opacity: 1;">
+
+                <div id="backtotop" class="button-wrap left">
+                  <div class="icon-wrap parallax-wrap" style="translate: none; rotate: none; scale: none; transform: translate(0px);">
+                    <div class="button-icon parallax-element" style="translate: none; rotate: none; scale: none; transform: translate(0px);">
+                      <i class="fa-solid fa-angle-up"></i>
+                    </div>
+                  </div>
+                  <div class="button-text sticky left"><span data-hover="Back Top">Back Top</span></div>
+                </div>
+
+                <div class="footer-middle">
+                  <div class="copyright">2024 © <a class="link" target="_blank" href="">SAGE UNIVERSE</a>. All rights
+                    reserved.</div>
+                </div>
+
+                <div class="socials-wrap">
+                  <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                  <div class="socials-text">Follow Us</div>
+                  <ul class="socials">
+                    <li><span class="parallax-wrap"><a class="parallax-element" href="https://t.me/sage_universe" target="_blank"><i class="fa-brands fa-telegram"></i> </a></span></li>
+                    <li><span class="parallax-wrap"><a class="parallax-element" href="https://x.com/SAGEUNIVERS3" target="_blank"> <i class="fa-brands fa-x-twitter"></i> </a></span></li>
+                    <li><span class="parallax-wrap"><a class="parallax-element" href="https://jup.ag/swap/SOL-CMe1QWsoDWFUi95GMkk7mCTnnjxBxtnJ3jbrEhQTVWL5" target="_blank"><img src="jupiter-logo.svg" style="width: 20px;" alt=""> </a></span></li>
+
+                  </ul>
+                </div>
+
+              </div>
+            </footer>
+            <!--/Footer -->
+
+
+          </div>
+          <div class="scrollbar-track scrollbar-track-x" style="display: none;">
+            <div class="scrollbar-thumb scrollbar-thumb-x" style="width: 1920px; transform: translate3d(0px, 0px, 0px);"></div>
+          </div>
+          <div class="scrollbar-track scrollbar-track-y" style="display: block;">
+            <div class="scrollbar-thumb scrollbar-thumb-y" style="height: 840.496px; transform: translate3d(0px, 0px, 0px);"></div>
+          </div>
+        </div>
+        <!--/Content Scroll -->
+
+
+
+
+
+      </div>
+      <!--/Page Content -->
+
+    </div>
+  </main>
+
+
+
+
+  <div class="cd-cover-layer"></div>
+  <div id="magic-cursor" class="light-content">
+    <div id="ball" style="translate: none; rotate: none; scale: none; border-width: 4px; transform: translate(-50%, -50%) translate3d(247.921px, 931.094px, 0px) scale(0.5); background-color: rgba(153, 153, 153, 0); border-color: rgb(153, 153, 153); opacity: 1;" class="">
+      <div id="ball-drag-x"></div>
+      <div id="ball-drag-y"></div>
+      <div id="ball-loader" style="left: 0px; top: 0px; border-width: 4px;"></div>
+    </div>
+  </div>
+  <div id="clone-image">
+    <div class="hero-translate"></div>
+  </div>
+  <div id="rotate-device"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="app" class="active"></div>
+
+
+</body></html>
